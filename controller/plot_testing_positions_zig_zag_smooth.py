@@ -11,7 +11,7 @@ import parameters as params
 
 fontsize_large = 32
 fontsize_small = 28
-line_width = 2
+line_width = 4
 
 filename = 'session_002_2_zig_zag_smooth.csv'
 

@@ -11,7 +11,7 @@ import parameters as params
 
 fontsize_large = 32
 fontsize_small = 28
-line_width = 2
+line_width = 4
 
 # Parameters for path point calculation
 length = 10.0
