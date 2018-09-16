@@ -2,15 +2,44 @@
 
 import h5py
 import json
+import os
 import signal
+import subprocess
+import sys
+import time
 
 import environment as env
 import network as net
 import parameters as params
 
+# Read session as command line argument
+if len(sys.argv) == 2:
+    scenario = sys.argv[1]
+
+    if scenario in params.scenarios:
+        params.train_on = scenario
+
+        if scenario in params.scenarios_eight:
+            params.maze = 'eight'
+        elif scenario in params.scenarios_cross:
+            params.maze = 'cross'
+        else:
+            params.maze = 'zig_zag'
+    else:
+        sys.exit("Scenario doesn't exist")
+
 # Filepaths for storing data
 filename = "training_" + params.train_on
 filepath = "../data/" + params.session + '/' + filename
+
+# Create folder if it doesn't exist
+if not os.path.exists("../data/" + params.session + '/'):
+    os.makedirs("../data/" + params.session + '/')
+
+# Start roscore and vrep with scenario
+path_to_scenario = '~/Documents/bachelor-thesis/Autonomous-Locomotion-Control-for-a-Snike-Like-Robot-with-a-DVS-and-a-SNN/V-REP_scenarios/' + params.train_on + '.ttt'
+subprocess.call(["../roscore_vrep.sh", path_to_scenario])
+time.sleep(5)
 
 # Arrays for storing the training data
 weights_l = []
