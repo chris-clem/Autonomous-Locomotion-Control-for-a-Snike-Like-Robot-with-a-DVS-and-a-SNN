@@ -30,7 +30,6 @@ r_min = 2.
 
 def output_spikes(t):
     delta_t = 1
-
     n_l = 0 + 1*(t/delta_t)
     n_r = 25 - 1*(t/delta_t)
 
@@ -62,7 +61,7 @@ for t in range(0, t_end):
 nrows = 4
 ncols = 1
 
-fig, axes = plt.subplots(nrows, ncols, figsize=(10, 2.5*(nrows+1)), sharex=True)
+fig, axes = plt.subplots(nrows, ncols, figsize=(20, 5*(nrows+1)), sharex=True)
 
 gs = gridspec.GridSpec(nrows=nrows,
                        ncols=ncols,
