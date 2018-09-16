@@ -25,20 +25,20 @@ if params.maze == 'eight':
                  'scenario_eight_2_5',
                  'scenario_eight_3_0'
                 ]
-    number_of_segments = 16
+    numbers_of_segments = [16]*len(scenarios)
     axvline_factor = 0.5
     filename_pdf = params.session + "_testing_performance_scenario_eight.pdf"
     colors = ['b', 'g', 'r', 'c', 'm', 'y']
 elif params.maze == 'zig_zag':
-    scenarios = ['scenario_zig_zag']
-    number_of_segments = 16
+    scenarios = ['scenario_zig_zag', 'scenario_zig_zag_smooth']
+    numbers_of_segments = [16, 20]
     axvline_factor = 1.0
     filename_pdf = params.session + "_testing_performance_scenario_zig_zag.pdf"
-    colors = ['b']
+    colors = ['b', 'g']
 elif params.maze == 'cross':
     scenarios = ['scenario_cross_110', 'scenario_cross_105',
                  'scenario_cross_100', 'scenario_cross_95']
-    number_of_segments = 12
+    numbers_of_segments = [12]*len(scenarios)
     axvline_factor = 0.5
     filename_pdf = params.session + "_testing_performance_scenario_cross.pdf"
     colors = ['b', 'g', 'r', 'c']
@@ -109,9 +109,9 @@ def plot_controller_performance(dfs_1, dfs_2):
     axvlines_array = []
     for i in range(len(scenarios)):
         axvlines=[]
-        axvlines.append((dfs_1[i]['steps'].iloc[-2]/number_of_segments)*axvline_factor)
-        for j in range(number_of_segments-1):
-            axvlines.append(axvlines[0] + (j+1)*(dfs_1[i]['steps'].iloc[-2]/number_of_segments))
+        axvlines.append((dfs_1[i]['steps'].iloc[-2]/numbers_of_segments[i])*axvline_factor)
+        for j in range(numbers_of_segments[i]-1):
+            axvlines.append(axvlines[0] + (j+1)*(dfs_1[i]['steps'].iloc[-2]/numbers_of_segments[i]))
 
         axvlines_array.append(axvlines)
 

@@ -1,11 +1,11 @@
 """Saves all simulation parameters in one place."""
 
 # Session to store/ load weights in case of training/ testing
-session = "session_002"
+session = "session_001"
 train_on = "scenario_eight_2_0"
-test_on = ""
+test_on = "scenario_zig_zag_smooth"
 # Select maze to train/ test on: eight, zig_zag, cross for reset condition in environment
-maze = 'eight'
+maze = 'zig_zag'
 # Add the scenario the controller is tested on
 comment = "Final Parameters"
 

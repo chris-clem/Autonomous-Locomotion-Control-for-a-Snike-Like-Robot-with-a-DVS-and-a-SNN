@@ -62,7 +62,7 @@ for t in range(0, t_end):
 nrows = 4
 ncols = 1
 
-fig, axes = plt.subplots(nrows, ncols, figsize=(20, 5*(nrows+1)), sharex=True)
+fig, axes = plt.subplots(nrows, ncols, figsize=(10, 2.5*(nrows+1)), sharex=True)
 
 gs = gridspec.GridSpec(nrows=nrows,
                        ncols=ncols,
@@ -73,21 +73,21 @@ for i in range(nrows*ncols):
     axes.append(plt.subplot(gs[i]))
 
 axes[0].set_ylim(-1, 26)
-axes[0].plot(time_step, n_l, lw=line_width_thick, label='$n_l(t)$')
-axes[0].plot(time_step, n_r, lw=line_width_thick, label='$n_r(t)$')
+axes[0].plot(time_step, n_l, lw=line_width_thick, label='$n_l(t)$', marker='o')
+axes[0].plot(time_step, n_r, lw=line_width_thick, label='$n_r(t)$', marker='o')
 
 axes[1].set_ylim(-1.1, 1.1)
-axes[1].plot(time_step, m_l, lw=line_width_thick,label='$m_l(t)$')
-axes[1].plot(time_step, m_r, lw=line_width_thick, label='$m_r(t)$')
-axes[1].plot(time_step, a, lw=line_width_thick, label='$a(t)$')
+axes[1].plot(time_step, m_l, lw=line_width_thick,label='$m_l(t)$', marker='o')
+axes[1].plot(time_step, m_r, lw=line_width_thick, label='$m_r(t)$', marker='o')
+axes[1].plot(time_step, a, lw=line_width_thick, label='$a(t)$', marker='o')
 
 axes[2].set_ylim(-1.1, 1.1)
-axes[2].plot(time_step, c, lw=line_width_thick, label='$c(t)$')
-axes[2].plot(time_step, turn_pre_new_array, lw=line_width_thick, label='$turn_{pre}(t)$')
+axes[2].plot(time_step, c, lw=line_width_thick, label='$c(t)$', marker='o')
+axes[2].plot(time_step, turn_pre_new_array, lw=line_width_thick, label='$turn_{pre}(t)$', marker='o')
 
 axes[3].set_ylim(min(radius_array)-1, max(radius_array)+1)
 axes[3].set_xlabel('steps', fontsize=fontsize_large)
-axes[3].plot(time_step, radius_array, lw=line_width_thick, label='$radius(t)$', color='k')
+axes[3].plot(time_step, radius_array, lw=line_width_thick, label='$radius(t)$', color='k', marker='o')
 
 for ax in axes:
     ax.tick_params(labelsize=fontsize_small)
