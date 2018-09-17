@@ -102,18 +102,20 @@ In a real-world application, such a robot could be deployed in areas with uneven
 
 8. Install NEST 2.14.0 from http://www.nest-simulator.org/
 
-## Start a training/ testing simulation
+## Start a simulation
 
-1. Start a ROS node via the terminal
+- Set parameters (training/ testing length, reward factor, resolution, etc.) in `./controller/parameters.py`
+- Start a training session by running the following command from the `./controller/` folder. After the training, close the terminal that opened up.
 	```
-	roscore
+	training.py
 	```
-2. V-REP
-- Start V-REP via another terminal from the V-REP foler
-	```
-	.\vrep.sh
-	```
-- Open V-REP scenario and start the V-REP simulation
-3. SNN
-- Set parameters in `./controller/parameters.py`. Create a subfolder for each session otherwise the data will be overwritten.
-- Start training/ testing simulation by running `./controller/training.py`/ `./controller/controller.py`.
+  (Uses scenario_eight_2_0 as the default training scenario. If you want to train on another scenario, run the following command:)
+  ```
+  training.py scenario_eight_0_5
+  ```
+  - Start a testing session by running the following command from the `./controller/` folder. After the training, close the terminal that opened up.
+  	```
+  	controller.py scenario_eight_0_5
+  	```
+    (Uses scenario_eight_2_0 as the default training scenario. If you want to train on another scenario, run the following command:)
+  
