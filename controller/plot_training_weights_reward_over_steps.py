@@ -1,4 +1,5 @@
 """Plot the weights and reward over steps after a training session."""
+# Figure 4.2
 
 import numpy as np
 import h5py
@@ -35,8 +36,8 @@ data = [w_l, w_r]
 def plt_weights_over_steps(index, ylabel, data):
     ax = plt.subplot(index)
     ax.set_ylabel(ylabel, fontsize=fontsize_large)
-    ax.set_xlim(0, steps_cumulative[2])
-    ax.set_ylim(-2000, 3500)
+    ax.set_xlim(0, 1000)
+    ax.set_ylim(-5000, 6000)
     ax.tick_params(axis='both', which='both',
                    direction='in', bottom=True,
                    top=True, left=True, right=True,
@@ -56,7 +57,7 @@ for i in range(len(data)):
 ax1 = plt.subplot(313)
 ax1.set_xlabel('Simulation Time [1 step = 50 ms]', fontsize=fontsize_large)
 ax1.set_ylabel('Reward', fontsize=fontsize_large)
-ax1.set_xlim(0, steps_cumulative[2])
+ax1.set_xlim(0, 1000)
 plt.xticks(fontsize=fontsize_small)
 plt.yticks(fontsize=fontsize_small)
 plt.grid(linestyle=':')

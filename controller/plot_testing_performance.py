@@ -1,4 +1,5 @@
 """Plot the perfomance of a controller."""
+# Figure 4.5, 4.7, 4.10
 
 import math
 import matplotlib.pylab as plt
@@ -13,6 +14,15 @@ import parameters as params
 fontsize_large = 32
 fontsize_small = 28
 line_width = 2
+
+# Read maze version as command line argument
+if len(sys.argv) == 2:
+    maze = sys.argv[1]
+
+    if maze in params.maze_versions:
+        params.maze = maze
+    else:
+        sys.exit("Maze version doesn't exist")
 
 # Parameters for snake pos_data plot (uncomment the one you want to plot)
 
@@ -31,7 +41,7 @@ if params.maze == 'eight':
     colors = ['b', 'g', 'r', 'c', 'm', 'y']
 elif params.maze == 'zig_zag':
     scenarios = ['scenario_zig_zag', 'scenario_zig_zag_smooth']
-    numbers_of_segments = [16, 20]
+    numbers_of_segments = [19, 21]
     axvline_factor = 1.0
     filename_pdf = params.session + "_testing_performance_scenario_zig_zag.pdf"
     colors = ['b', 'g']

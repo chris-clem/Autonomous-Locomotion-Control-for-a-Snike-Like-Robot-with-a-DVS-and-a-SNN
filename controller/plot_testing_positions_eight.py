@@ -1,4 +1,5 @@
 """Plot the snake positions in the eight-shaped maze."""
+# Figure 4.6
 
 import math
 import matplotlib.pylab as plt
@@ -9,9 +10,9 @@ import pandas as pd
 
 import parameters as params
 
-fontsize_large = 34
-fontsize_small = 30
-line_width = 4
+fontsize_large = 40
+fontsize_small = 36
+line_width = 6
 
 # Parameters for path point calculation
 length = 10.0

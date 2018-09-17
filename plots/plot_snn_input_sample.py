@@ -1,4 +1,5 @@
 """Plot the snn input sample Figure."""
+# Figure 3.8
 
 import numpy as np
 import matplotlib.pyplot as plt

@@ -1,4 +1,5 @@
 """Plot steps per episode after a training session."""
+# Figure 4.1
 
 import numpy as np
 import h5py

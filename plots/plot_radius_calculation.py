@@ -1,4 +1,5 @@
 """Plot the radius calculation Figure."""
+# Figure 3.9
 
 import math
 import matplotlib.pyplot as plt

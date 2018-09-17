@@ -1,4 +1,5 @@
 """Plot the snake positions in the zig-zag-smoothed-shaped maze."""
+# Figure 4.9
 
 import math
 import matplotlib.pylab as plt

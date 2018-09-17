@@ -1,4 +1,5 @@
 """Plot the reward Figure."""
+# Figure 3.10
 
 import math
 import matplotlib.pyplot as plt

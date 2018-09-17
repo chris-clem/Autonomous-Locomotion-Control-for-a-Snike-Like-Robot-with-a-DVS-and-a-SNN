@@ -1,4 +1,5 @@
 """Plot the rstdp Figure."""
+# Figure 2.5
 
 import math
 import matplotlib.pyplot as plt

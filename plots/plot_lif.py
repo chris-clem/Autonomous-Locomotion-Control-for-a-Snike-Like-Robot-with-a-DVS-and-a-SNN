@@ -1,4 +1,5 @@
-#!/usr/bin/env python
+"""Plot the radius lif Figure."""
+# Figure 2.3
 
 import math
 import matplotlib.pyplot as plt
