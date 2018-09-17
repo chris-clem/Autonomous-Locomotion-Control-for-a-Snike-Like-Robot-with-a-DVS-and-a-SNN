@@ -113,9 +113,8 @@ In a real-world application, such a robot could be deployed in areas with uneven
   ```
   training.py scenario_eight_0_5
   ```
-  - Start a testing session by running the following command from the `./controller/` folder. After the training, close the terminal that opened up.
-  	```
-  	controller.py scenario_eight_0_5
-  	```
-    (Uses scenario_eight_2_0 as the default training scenario. If you want to train on another scenario, run the following command:)
-  
+- Start a testing session by running the following command from the `./controller/` folder. After the training, close the terminal that opened up.
+	```
+	controller.py scenario_eight_0_5
+	```
+  (Uses scenario_eight_2_0 as the default training scenario. If you want to train on another scenario, run the following command:)
