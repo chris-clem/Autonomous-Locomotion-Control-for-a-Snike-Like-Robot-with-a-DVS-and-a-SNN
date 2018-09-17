@@ -38,7 +38,7 @@ if not os.path.exists("../data/" + params.session + '/'):
     os.makedirs("../data/" + params.session + '/')
 
 # Start roscore and vrep with scenario
-path_to_scenario = '~/Documents/bachelor-thesis/Autonomous-Locomotion-Control-for-a-Snike-Like-Robot-with-a-DVS-and-a-SNN/V-REP_scenarios/' + params.train_on + '.ttt'
+path_to_scenario = '~/Documents/bachelor-thesis/Autonomous-Locomotion-Control-for-a-Snike-Like-Robot-with-a-DVS-and-a-SNN/V-REP_scenarios/' + params.test_on + '.ttt'
 subprocess.call(["../roscore_vrep.sh", path_to_scenario])
 time.sleep(5)
 

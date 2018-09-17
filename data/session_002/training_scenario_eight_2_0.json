@@ -1,0 +1,75 @@
+{
+    "A_minus": 1.0, 
+    "A_plus": 1.0, 
+    "comment": "Lower resolution", 
+    "crop_bottom": 48, 
+    "crop_top": 0, 
+    "dvs_resolution": [
+        128, 
+        128
+    ], 
+    "iaf_params": {}, 
+    "iaf_params_hidden": {}, 
+    "max_poisson_freq": 300.0, 
+    "max_spikes": 15.0, 
+    "maze": "eight", 
+    "maze_width": 5.0, 
+    "n_max": 25.0, 
+    "poisson_params": {}, 
+    "r_min": 2.0, 
+    "rate": 20.0, 
+    "reset_distance": 2.3, 
+    "reset_steps": 500, 
+    "resolution": [
+        8, 
+        5
+    ], 
+    "reward_factor": 0.00025, 
+    "scenarios": [
+        "scenario_eight_0_5", 
+        "scenario_eight_1_0", 
+        "scenario_eight_1_5", 
+        "scenario_eight_2_0", 
+        "scenario_eight_2_5", 
+        "scenario_eight_3_0", 
+        "scenarios_cross_95", 
+        "scenarios_cross_100", 
+        "scenarios_cross_105", 
+        "scenarios_cross_110", 
+        "scenarios_zig_zag", 
+        "scenarios_zig_zag_smooth"
+    ], 
+    "scenarios_cross": [
+        "scenarios_cross_95", 
+        "scenarios_cross_100", 
+        "scenarios_cross_105", 
+        "scenarios_cross_110"
+    ], 
+    "scenarios_eight": [
+        "scenario_eight_0_5", 
+        "scenario_eight_1_0", 
+        "scenario_eight_1_5", 
+        "scenario_eight_2_0", 
+        "scenario_eight_2_5", 
+        "scenario_eight_3_0"
+    ], 
+    "scenarios_zig_zag": [
+        "scenarios_zig_zag", 
+        "scenarios_zig_zag_smooth"
+    ], 
+    "session": "session_002", 
+    "sim_time": 50.0, 
+    "t_refrac": 2.0, 
+    "tau_c": 1000.0, 
+    "tau_n": 200.0, 
+    "test_on": "scenario_eight_2_0", 
+    "testing_length": 5000, 
+    "time_resolution": 0.1, 
+    "train_on": "scenario_eight_2_0", 
+    "training_length": 10000, 
+    "turn_pre": 0.0, 
+    "w0_max": 201.0, 
+    "w0_min": 200.0, 
+    "w_max": 10000.0, 
+    "w_min": -10000.0
+}

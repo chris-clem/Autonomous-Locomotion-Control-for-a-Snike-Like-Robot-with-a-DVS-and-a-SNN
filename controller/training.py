@@ -82,7 +82,7 @@ for i in range(params.training_length):
      travelled_distances, vrep_steps) = env.step(n_l, n_r)
 
     # Save weights every 100 simulation steps
-    if i % 100 == 0:
+    if i % 10 == 0:
         weights_l.append(w_l)
         weights_r.append(w_r)
         weights_i.append(i)

@@ -1,11 +1,11 @@
 """Saves all simulation parameters in one place."""
 
 # Session to store/ load weights in case of training/ testing
-session = "session_002"
-comment = "Lower resolution"
+session = "session_003"
+comment = ""
 
 # Other
-training_length = 10000
+training_length = 15000
 testing_length = 5000
 maze_width = 5.0
 reset_distance = 2.3
@@ -63,7 +63,8 @@ r_min = 2.
 # Default parameters, get overwritten if 'training.py scenario_xxx' is called
 # (same for controller.py)
 train_on = "scenario_eight_2_0"
-test_on = "scenario_eight_2_0"
+test_on = "scenario_cross_110"
+maze_versions = ['eight', 'cross', 'zig_zag']
 maze = 'eight'
 
 # All exisiting scenarios
@@ -73,12 +74,12 @@ scenarios_eight = ['scenario_eight_0_5',
                    'scenario_eight_2_0',
                    'scenario_eight_2_5',
                    'scenario_eight_3_0']
-scenarios_cross = ['scenarios_cross_95',
-                   'scenarios_cross_100',
-                   'scenarios_cross_105',
-                   'scenarios_cross_110']
-scenarios_zig_zag = ['scenarios_zig_zag',
-                     'scenarios_zig_zag_smooth']
+scenarios_cross = ['scenario_cross_95',
+                   'scenario_cross_100',
+                   'scenario_cross_105',
+                   'scenario_cross_110']
+scenarios_zig_zag = ['scenario_zig_zag',
+                     'scenario_zig_zag_smooth']
 
 scenarios = scenarios_eight + scenarios_cross + scenarios_zig_zag
 
