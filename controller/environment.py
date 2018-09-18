@@ -37,13 +37,13 @@ class VrepEnvironment():
         self.pos_sub = rospy.Subscriber('transformData',
                                         Transform,
                                         self.pos_callback)
-        self.pos_data = []
+        self.pos_data = [0, 0, 0]
 
         # Distances Subscriber
         self.distances_sub = rospy.Subscriber('distances',
                                               Float32MultiArray,
                                               self.distances_callback)
-        self.distances = []
+        self.distances = [0, 0]
 
         # Travelled distance Subscriber
         self.travelled_distance_sub = rospy.Subscriber('travelledDistance',
@@ -171,7 +171,7 @@ class VrepEnvironment():
         a, c = self.calculate_and_publish_radius(n_l, n_r)
 
         # Calculate distance to center
-        self.distance = params.maze_width/2 - self.distances[0]
+        self.distance = (self.distances[0] + self.distances[1])/2 - self.distances[0]
 
         # Set reward signal
         if self.positive_direction is True:
