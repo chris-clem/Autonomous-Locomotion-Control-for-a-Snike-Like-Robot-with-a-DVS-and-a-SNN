@@ -37,7 +37,7 @@ def plt_weights_over_steps(index, ylabel, data):
     ax = plt.subplot(index)
     ax.set_ylabel(ylabel, fontsize=fontsize_large)
     ax.set_xlim(0, 1000)
-    ax.set_ylim(-5000, 6000)
+    ax.set_ylim(-8000, 8000)
     ax.tick_params(axis='both', which='both',
                    direction='in', bottom=True,
                    top=True, left=True, right=True,

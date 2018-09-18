@@ -1,7 +1,7 @@
 {
     "A_minus": 1.0, 
     "A_plus": 1.0, 
-    "comment": "Final training parameters", 
+    "comment": "Lower resolution", 
     "crop_bottom": 48, 
     "crop_top": 0, 
     "dvs_resolution": [
@@ -13,6 +13,11 @@
     "max_poisson_freq": 300.0, 
     "max_spikes": 15.0, 
     "maze": "eight", 
+    "maze_versions": [
+        "eight", 
+        "cross", 
+        "zig_zag"
+    ], 
     "maze_width": 5.0, 
     "n_max": 25.0, 
     "poisson_params": {}, 
@@ -21,17 +26,49 @@
     "reset_distance": 2.3, 
     "reset_steps": 500, 
     "resolution": [
-        16, 
-        10
+        8, 
+        5
     ], 
     "reward_factor": 0.00025, 
+    "scenarios": [
+        "scenario_eight_0_5", 
+        "scenario_eight_1_0", 
+        "scenario_eight_1_5", 
+        "scenario_eight_2_0", 
+        "scenario_eight_2_5", 
+        "scenario_eight_3_0", 
+        "scenario_cross_95", 
+        "scenario_cross_100", 
+        "scenario_cross_105", 
+        "scenario_cross_110", 
+        "scenario_zig_zag", 
+        "scenario_zig_zag_smooth"
+    ], 
+    "scenarios_cross": [
+        "scenario_cross_95", 
+        "scenario_cross_100", 
+        "scenario_cross_105", 
+        "scenario_cross_110"
+    ], 
+    "scenarios_eight": [
+        "scenario_eight_0_5", 
+        "scenario_eight_1_0", 
+        "scenario_eight_1_5", 
+        "scenario_eight_2_0", 
+        "scenario_eight_2_5", 
+        "scenario_eight_3_0"
+    ], 
+    "scenarios_zig_zag": [
+        "scenario_zig_zag", 
+        "scenario_zig_zag_smooth"
+    ], 
     "session": "session_001", 
     "sim_time": 50.0, 
     "t_refrac": 2.0, 
     "tau_c": 1000.0, 
     "tau_n": 200.0, 
-    "test_on": "", 
-    "testing_length": 200, 
+    "test_on": "scenario_eight_3_0", 
+    "testing_length": 6000, 
     "time_resolution": 0.1, 
     "train_on": "scenario_eight_2_0", 
     "training_length": 15000, 
