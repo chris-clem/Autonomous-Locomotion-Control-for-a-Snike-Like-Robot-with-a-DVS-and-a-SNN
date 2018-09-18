@@ -42,7 +42,7 @@ if params.maze == 'eight':
     colors = ['b', 'g', 'r', 'c', 'm', 'y']
 elif params.maze == 'zig_zag':
     scenarios = ['scenario_zig_zag', 'scenario_zig_zag_smooth']
-    numbers_of_segments = [19, 21]
+    numbers_of_segments = [17, 21]
     axvline_factor = 1.0
     filename_pdf = params.session + "_testing_performance_scenario_zig_zag.pdf"
     colors = ['b', 'g']
