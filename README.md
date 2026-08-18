@@ -1,4 +1,5 @@
 
+
 # Autonomous Locomotion Control for a Snake-like Robot with a Dynamic Vision Sensor and a Spiking Neural Network
 
 The repository for the Bachelor's Thesis in Informatics 'Autonomous Locomotion Control for a Snake-like Robot with a Dynamic Vision Sensor and a Spiking Neural Network' by Christoph Clement under the supervision of Zhenshan Bing, M.Sc. at the TU Munich.
@@ -105,6 +106,7 @@ In a real-world application, such a robot could be deployed in areas with uneven
 ## Start a simulation
 
 - Set parameters (training/ testing length, reward factor, resolution, etc.) in `./controller/parameters.py`
+- Note: `controller.py` uses a hardcoded scenario path, so it expects the repository folder to be located at `~/Documents/bachelor-thesis/Autonomous-Locomotion-Control-for-a-Snike-Like-Robot-with-a-DVS-and-a-SNN`.
 - Start a training session by running the following command from the `./controller/` folder. After the training, close the terminal that opened up.
 	```
 	training.py
